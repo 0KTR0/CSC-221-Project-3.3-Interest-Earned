@@ -39,6 +39,10 @@ int main()
     finalBalance = principal * pow(1 + interestRateDecimal/annualCompoundRate,annualCompoundRate);
     interestEarned = finalBalance - principal;
 
+    //round answers to 2 decimal places
+    finalBalance = round(finalBalance * 100.0) / 100.0;
+    interestEarned = round(interestEarned * 100.0) / 100.0;
+    
     //Display results
     cout << "$" << finalBalance << " is the total amount in savings after a year.\n";
 
